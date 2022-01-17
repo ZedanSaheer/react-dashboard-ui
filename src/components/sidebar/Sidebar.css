@@ -1,0 +1,9 @@
+.Sidebar{
+    flex: 0.2;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
