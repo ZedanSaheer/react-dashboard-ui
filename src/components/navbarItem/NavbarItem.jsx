@@ -16,7 +16,7 @@ const NavbarItem = ({ dashboard, sidebarType, pageLayout, inbox, ticket, extra, 
 
     if (dashboard) {
         return (
-            <NavLink className='NavbarItem' to="/" className={isActive=>'NavbarItem active' + (!isActive && "NavbarItem")}>
+            <NavLink to="/" className={({isActive})=>(isActive ? "NavbarItem active" : "NavbarItem")}>
                 <p><MdDashboard /><span>Dashboard</span></p>
                 <MdArrowForwardIos />
             </NavLink>
@@ -24,76 +24,76 @@ const NavbarItem = ({ dashboard, sidebarType, pageLayout, inbox, ticket, extra, 
     }
     if (sidebarType) {
         return (
-            <div className='NavbarItem' onClick={activeItem}>
+            <NavLink to="/sidebar" className={({isActive})=>(isActive ? "NavbarItem active" : "NavbarItem")}>
                
                 <p><GoSettings /><span>Sidebar Type</span></p>
                 <MdArrowForwardIos />
-            </div>
+            </NavLink>
         )
     }
     if (pageLayout) {
         return (
-            <div className='NavbarItem' onClick={activeItem}>
+            <NavLink to="/pageLayout" className={({isActive})=>(isActive ? "NavbarItem active" : "NavbarItem")}>
                 <p><MdContentCopy /><span>Page Layout</span></p>
                 <MdArrowForwardIos />
-            </div>
+            </NavLink>
         )
     }
     if (inbox) {
         return (
-            <div className='NavbarItem' onClick={activeItem}>  
+            <NavLink to="/inbox" className={({isActive})=>(isActive ? "NavbarItem active" : "NavbarItem")}>  
                 <p><HiInboxIn /><span>Inbox</span></p>
                 <MdArrowForwardIos />
-            </div>
+            </NavLink>
         )
     }
     if (ticket) {
         return (
-            <div className='NavbarItem' onClick={activeItem}>
+            <NavLink to="/tickets" className={({isActive})=>(isActive ? "NavbarItem active" : "NavbarItem")}>
                 <p><RiTicket2Line /><span>Ticket</span></p>
                 <MdArrowForwardIos />
-            </div>
+            </NavLink>
         )
     }
     if (extra) {
         return (
-            <div className='NavbarItem' onClick={activeItem}>
+            <NavLink to="/extra" className={({isActive})=>(isActive ? "NavbarItem active" : "NavbarItem")}>
                 <p><MdMicrowave /><span>Extra</span></p>
                 <MdArrowForwardIos />
-            </div>
+            </NavLink>
         )
     }
     if (uiElements) {
         return (
-            <div className='NavbarItem' onClick={activeItem}>
+            <NavLink to="/uielements" className={({isActive})=>(isActive ? "NavbarItem active" : "NavbarItem")}>
                 <p><MdWidgets /><span>UI Elements</span></p>
                 <MdArrowForwardIos />
-            </div>
+            </NavLink>
         )
     }
     if (cards) {
         return (
-            <div className='NavbarItem' onClick={activeItem}>
+            <NavLink to="/cards" className={({isActive})=>(isActive ? "NavbarItem active" : "NavbarItem")}>
                 <p><FiCreditCard /><span>Cards</span></p>
                 <MdArrowForwardIos />
-            </div>
+            </NavLink>
         )
     }
     if (components) {
         return (
-            <div className='NavbarItem' onClick={activeItem}>
+            <NavLink to="/components" className={({isActive})=>(isActive ? "NavbarItem active" : "NavbarItem")}>
                 <p><FiCreditCard /><span>Components</span></p>
                 <MdArrowForwardIos />
-            </div>
+            </NavLink>
         )
     }
     if (widgets) {
         return (
-            <div className='NavbarItem' onClick={activeItem}>
+            <NavLink to="/widgets" className={({isActive})=>(isActive ? "NavbarItem active" : "NavbarItem")}>
              
                 <p><MdMicrowave /><span>Widgets</span></p>
                 <MdArrowForwardIos />
-            </div>
+            </NavLink>
         )
     }
 }

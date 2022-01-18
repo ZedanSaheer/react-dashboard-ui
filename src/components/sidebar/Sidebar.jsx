@@ -5,7 +5,7 @@ import './Sidebar.css'
 const Sidebar = () => {
     return (
         <div className='Sidebar'>
-            
+            <button>Create new</button>
            <Navbar settings/>
            <Navbar support/>
            <Navbar components/>

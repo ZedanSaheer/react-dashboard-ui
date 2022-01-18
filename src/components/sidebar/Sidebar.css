@@ -3,7 +3,34 @@
     height: 100%;
     overflow: hidden;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 1rem;
+}
+
+button{
+    text-align: center;
+    width: 70%;
+    border: none;
+    background-color: #F3C6BD;
+    height: 60px;
+    background: url("./button.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    background-position: center;
+    border-radius: 20px;
+}
+
+button:hover {
+    color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width:1100px) {
+    .Sidebar{
+        flex: 0.3;
+    }
 }
