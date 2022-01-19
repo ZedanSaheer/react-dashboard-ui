@@ -10,10 +10,6 @@ import { NavLink } from "react-router-dom"
 
 const NavbarItem = ({ dashboard, sidebarType, pageLayout, inbox, ticket, extra, uiElements, cards, components, widgets }) => {
 
-    const activeItem = (e) => {
-        e.target.classList.toggle("active");
-    }
-
     if (dashboard) {
         return (
             <NavLink to="/" className={({isActive})=>(isActive ? "NavbarItem active" : "NavbarItem")}>
